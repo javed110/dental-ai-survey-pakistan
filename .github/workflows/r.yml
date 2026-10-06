@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -14,8 +14,8 @@ jobs:
           python-version: '3.12'
       - name: Verify committed aggregate values and data exclusion
         run: python tests/check_public_release.py
-      - uses: r-lib/actions/setup-r@f57f1301a053485946083d7a45022b278929a78a
+      - uses: r-lib/actions/setup-r@f9a764fea8d5c63df6ef9a5c7795bf7deb5d7e05
         with:
-          r-version: release
+          r-version: '4.4.2'
       - name: Parse research R scripts
         run: Rscript -e 'files <- list.files(pattern="[.]R$"); invisible(lapply(files, parse)); cat("Parsed", length(files), "R scripts\n")'
