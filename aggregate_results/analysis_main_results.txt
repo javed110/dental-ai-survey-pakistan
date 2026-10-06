@@ -1,0 +1,172 @@
+N= 301 
+          variable              count                  n            percent 
+   "familiar_high"              "268"              "301" "89.0365448504983" 
+               low               high 
+"85.0030284573842" "92.0862234144308" 
+          variable              count                  n            percent 
+    "academic_use"              "174"              "301" "57.8073089700997" 
+               low               high 
+"52.1640798303265" "63.2537705440365" 
+          variable              count                  n            percent 
+    "clinical_use"              "110"              "301" "36.5448504983389" 
+               low               high 
+"31.3059765622592" "42.1228344946897" 
+          variable              count                  n            percent 
+  "curriculum_yes"              "262"              "301" "87.0431893687708" 
+               low               high 
+"82.7777192526897" "90.3750601831177" 
+          variable              count                  n            percent 
+   "diagnosis_yes"              "155"              "301" "51.4950166112957" 
+               low               high 
+"45.8658355615164" "57.0865187654893" 
+
+Gender diagnosis table (female=1, yes=1)
+   
+      0   1
+  0  66  46
+  1  80 109
+
+	Pearson's Chi-squared test
+
+data:  table(d$female, d$diagnosis_yes)
+X-squared = 7.759, df = 1, p-value = 0.005345
+
+
+Training interest (rows: 1-4 agreement scale) vs curricular willingness (columns: 1=yes, 2=no)
+   
+      1   2
+  1   8   2
+  2   6  16
+  3 168  16
+  4  80   5
+
+BARRIER PREVALENCES
+                      variable                          count 
+"High cost of AI technologies"                          "196" 
+                             n                        percent 
+                         "301"             "65.1162790697674" 
+                           low                           high 
+             "59.572235226058"             "70.2793474136661" 
+                         variable                             count 
+"Insufficient knowledge about AI"                             "177" 
+                                n                           percent 
+                            "301"                "58.8039867109634" 
+                              low                              high 
+               "53.1668052135928"                 "64.219281378774" 
+                   variable                       count 
+"Lack of technical support"                       "141" 
+                          n                     percent 
+                      "301"           "46.843853820598" 
+                        low                        high 
+         "41.2818585613392"          "52.4853934149821" 
+                              variable                                  count 
+"Uncertainty about the benefits of AI"                                   "81" 
+                                     n                                percent 
+                                 "301"                     "26.9102990033223" 
+                                   low                                   high 
+                    "22.2142693798308"                     "32.1882582364148" 
+                             variable                                 count 
+"Concerns about patient data privacy"                                 "125" 
+                                    n                               percent 
+                                "301"                    "41.5282392026578" 
+                                  low                                  high 
+                   "36.1023003824178"                      "47.16769176455" 
+                         variable                             count 
+"Regulatory and legal challenges"                              "83" 
+                                n                           percent 
+                            "301"                "27.5747508305648" 
+                              low                              high 
+               "22.8327618020115"                "32.8819232929033" 
+                      variable                          count 
+"Low efficiency of technology"                           "54" 
+                             n                        percent 
+                         "301"             "17.9401993355482" 
+                           low                           high 
+            "14.0181456758984"             "22.6702559783131" 
+
+MODEL combined clinical digital-tools-and-AI use response 
+
+Call:
+glm(formula = clinical_use ~ age_older + female + practice_grp + 
+    general_dentist, family = binomial(), data = d)
+
+Coefficients:
+                     Estimate Std. Error z value Pr(>|z|)  
+(Intercept)         -0.518510   0.315571  -1.643   0.1004  
+age_older            0.003162   0.294676   0.011   0.9914  
+female               0.228222   0.262909   0.868   0.3854  
+practice_grpPublic   0.003925   0.324873   0.012   0.9904  
+practice_grpPrivate -0.343008   0.394626  -0.869   0.3847  
+practice_grpMixed    0.675787   0.315474   2.142   0.0322 *
+general_dentist     -0.539625   0.251303  -2.147   0.0318 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 395.21  on 300  degrees of freedom
+Residual deviance: 381.69  on 294  degrees of freedom
+AIC: 395.69
+
+Number of Fisher Scoring iterations: 4
+
+                        OR  lower  upper      p
+(Intercept)         0.5954 0.3208 1.1052 0.1004
+age_older           1.0032 0.5630 1.7873 0.9914
+female              1.2564 0.7505 2.1033 0.3854
+practice_grpPublic  1.0039 0.5311 1.8977 0.9904
+practice_grpPrivate 0.7096 0.3274 1.5379 0.3847
+practice_grpMixed   1.9656 1.0592 3.6477 0.0322
+general_dentist     0.5830 0.3562 0.9540 0.0318
+AIC 395.6867 null.deviance 395.2062 residual.deviance 381.6867 
+fitted range 0.1976349 0.5959604 
+
+MODEL willingness for definitive diagnosis from AI output 
+
+Call:
+glm(formula = diagnosis_yes ~ clinical_use + age_older + female + 
+    practice_grp + familiar_high, family = binomial(), data = d)
+
+Coefficients:
+                    Estimate Std. Error z value Pr(>|z|)   
+(Intercept)         -0.78823    0.45119  -1.747  0.08064 . 
+clinical_use         0.68223    0.25722   2.652  0.00799 **
+age_older           -0.54095    0.28893  -1.872  0.06117 . 
+female               0.64470    0.25422   2.536  0.01121 * 
+practice_grpPublic   0.28726    0.31840   0.902  0.36695   
+practice_grpPrivate  0.26783    0.36012   0.744  0.45704   
+practice_grpMixed    0.60240    0.32460   1.856  0.06348 . 
+familiar_high        0.09449    0.38898   0.243  0.80808   
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 417.01  on 300  degrees of freedom
+Residual deviance: 393.92  on 293  degrees of freedom
+AIC: 409.92
+
+Number of Fisher Scoring iterations: 4
+
+                        OR  lower  upper      p
+(Intercept)         0.4547 0.1878 1.1009 0.0806
+clinical_use        1.9783 1.1949 3.2752 0.0080
+age_older           0.5822 0.3305 1.0257 0.0612
+female              1.9054 1.1577 3.1361 0.0112
+practice_grpPublic  1.3328 0.7141 2.4876 0.3669
+practice_grpPrivate 1.3071 0.6453 2.6476 0.4570
+practice_grpMixed   1.8265 0.9668 3.4508 0.0635
+familiar_high       1.0991 0.5128 2.3558 0.8081
+AIC 409.9214 null.deviance 417.0055 residual.deviance 393.9214 
+fitted range 0.2092959 0.7747953 
+Sample-standardized probabilities for clinical-use association: 0.617 0.4569 difference 0.16 
+Bootstrap risk-difference quantiles 0.04304103 0.159887 0.2782932 valid 2000 
+
+SENSITIVITY: exact repeated response patterns 1 
+N after omitting one copy of each repeat 300 
+Clinical use share, full/sensitivity 0.3654485 0.3633333 
+Diagnosis willingness share, full/sensitivity 0.5149502 0.5133333 
+Model A mixed practice OR, full/sensitivity 1.96558 1.914156 
+Model A general dentist OR, full/sensitivity 0.5829669 0.5924569 
+Model B clinical use OR, full/sensitivity 1.978288 1.962236 
+Model B female OR, full/sensitivity 1.905407 1.893253 

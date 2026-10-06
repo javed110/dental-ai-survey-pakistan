@@ -1,0 +1,13 @@
+"order","contrast","point_flagged","flagged_bootstrap","valid_bootstrap","maximum_absolute_coefficient","maximum_endpoint_shift_pp"
+"A","Age 31-60 vs 20-30",FALSE,0,1000,2.4833710653003,0
+"A","Female vs male",FALSE,0,1000,2.33893535565645,0
+"A","General dentist vs other",FALSE,0,1000,2.83412682349815,0
+"A","Public vs academic-only",FALSE,2,1000,17.9064093166045,0.144645325992003
+"A","Private vs academic-only",FALSE,25,1000,19.016752612227,1.65000146244778
+"A","Mixed vs academic-only",FALSE,0,1000,3.26333296293522,0
+"B","Age 31-60 vs 20-30",FALSE,0,1000,2.26001057374135,0
+"B","Female vs male",FALSE,0,1000,2.26562613946823,0
+"B","General dentist vs other",FALSE,0,1000,2.71486942658318,0
+"B","Public vs academic-only",FALSE,1,1000,19.641972980374,0.196996490309534
+"B","Private vs academic-only",FALSE,17,1000,18.8561312293986,0.275419660110154
+"B","Mixed vs academic-only",FALSE,0,1000,3.78357472699659,0

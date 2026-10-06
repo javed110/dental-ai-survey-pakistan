@@ -1,0 +1,20 @@
+"variable","code","label","n","denominator","percent"
+"Age",1,"20-30",227,301,75.4152823920266
+"Age",2,"31-40",45,301,14.9501661129568
+"Age",3,"41-50",25,301,8.30564784053156
+"Age",4,"51-60",4,301,1.32890365448505
+"Gender",1,"Male",112,301,37.2093023255814
+"Gender",2,"Female",189,301,62.7906976744186
+"Type of dental practice",1,"Public Sector (Govt Hospital/Clinic)",69,301,22.9235880398671
+"Type of dental practice",2,"Private Sector (Private clinic/Practice)",47,301,15.6146179401993
+"Type of dental practice",3,"Academic Institution (Dental College/University)",115,301,38.2059800664452
+"Type of dental practice",4,"Academic and Private Sector",55,301,18.2724252491694
+"Type of dental practice",5,"Academic and Public Sector",15,301,4.98338870431894
+"Primary Dental Specialisation",1,"Clinical Academics",33,301,10.9634551495017
+"Primary Dental Specialisation",2,"General Dentist",171,301,56.8106312292359
+"Primary Dental Specialisation",3,"Orthodontics",30,301,9.96677740863787
+"Primary Dental Specialisation",4,"Periodontics",4,301,1.32890365448505
+"Primary Dental Specialisation",5,"Endodontics",20,301,6.64451827242525
+"Primary Dental Specialisation",6,"Prosthodontics",15,301,4.98338870431894
+"Primary Dental Specialisation",7,"Oral Surgery",21,301,6.97674418604651
+"Primary Dental Specialisation",8,"Pediatric Dentistry",7,301,2.32558139534884

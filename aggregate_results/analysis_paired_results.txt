@@ -1,0 +1,20 @@
+N= 301 
+Confidence in diagnostic accuracy (agree/strongly agree): 216 301 0.717608 
+Willing to base definitive diagnosis on AI: 155 301 0.5149502 
+Paired table accuracy-confidence rows, diagnostic willingness columns:
+     willingness
+trust   0   1
+    0  59  26
+    1  87 129
+Supplementary paired-symmetry p (not reported in manuscript): 0.00000000711717 
+Paired percentage-point difference: 20.26578 
+Paired-difference percentile CI: 13.95349 26.9103 
+Willingness by four-level confidence:
+       n willing  percent
+[1,]  10       6 60.00000
+[2,]  75      20 26.66667
+[3,] 175     102 58.28571
+[4,]  41      27 65.85366
+Clinical-use aOR with years linear: 2.026051 
+Clinical-use aOR with log(1 + years): 2.051479 
+AIC linear/log-years: 406.5604 408.7719 

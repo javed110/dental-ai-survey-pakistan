@@ -1,0 +1,63 @@
+ panel                 contrast   n  x0  x1      total  total_low total_high    direct direct_low direct_high    indirect indirect_low
+     A       Age 31-60 vs 20-30 301 227  74 -0.1353110 -0.2749162 -0.0026295 -0.135445 -0.2763024  0.00094331  0.00013406   -0.0306589
+     A           Female vs male 301 112 189  0.1603396  0.0486017  0.2789519  0.150844  0.0363958  0.26566472  0.00949532   -0.0110033
+     A General dentist vs other 301 130 171 -0.0550182 -0.1616463  0.0650533 -0.043278 -0.1552451  0.07615893 -0.01174070   -0.0370352
+     A  Public vs academic-only 184 115  69  0.0633574 -0.0953483  0.2107628  0.063093 -0.0927919  0.21357617  0.00026460   -0.0453243
+     A Private vs academic-only 162 115  47  0.0299808 -0.1454556  0.2061438  0.055343 -0.1222292  0.23517332 -0.02536224   -0.1084747
+     A   Mixed vs academic-only 185 115  70  0.1725765  0.0364672  0.3207676  0.145413 -0.0019569  0.30536199  0.02716402   -0.0101264
+     B       Age 31-60 vs 20-30 301 227  74  0.0027007 -0.1349258  0.1455932  0.030014 -0.1111196  0.17969890 -0.02731362   -0.0832614
+     B           Female vs male 301 112 189  0.0482973 -0.0677490  0.1616682  0.021592 -0.0969932  0.13683583  0.02670566    0.0021462
+     B General dentist vs other 301 130 171 -0.1205186 -0.2387053 -0.0088617 -0.116298 -0.2341080 -0.00249402 -0.00422075   -0.0232737
+     B  Public vs academic-only 184 115  69  0.0039246 -0.1384507  0.1478278 -0.015607 -0.1551515  0.12532858  0.01953119   -0.0259372
+     B Private vs academic-only 162 115  47 -0.0915375 -0.2481568  0.0697942 -0.097911 -0.2515545  0.06583533  0.00637317   -0.0270046
+     B   Mixed vs academic-only 185 115  70  0.1545147 -0.0066075  0.2945685  0.119592 -0.0502332  0.26175945  0.03492233   -0.0057166
+ indirect_high bootstrap_valid
+     0.0336524            1000
+     0.0358870            1000
+     0.0081062            1000
+     0.0437579            1000
+     0.0228189            1000
+     0.0855622            1000
+     0.0067099            1000
+     0.0556124            1000
+     0.0079085            1000
+     0.0723315            1000
+     0.0570476            1000
+     0.0916253            1000
+
+All values are risk differences. Multiply by 100 for percentage points.
+Panel A treats the coded combined clinical-use response as the intermediate variable and willingness as outcome.
+Panel B reverses those roles; these two fits cannot determine time order.
+Total = direct + indirect by algebraic construction for each fitted model.
+Percentile intervals come from 1000 respondent bootstrap samples.
+These are observational regression-standardization functionals, not natural/interventional causal effects.
+Unknown time order, source-to-code agreement for use, prior interest, pre-use tool access and selection prevent causal mediation identification.
+
+NUMERICAL BOOTSTRAP DIAGNOSTICS: primary estimates above retain all valid replicates.
+Screen: absolute coefficient >15 or fitted probability <0.0000001 or >0.9999999; this is not a formal separation test.
+Diagnostic: A Age 31-60 vs 20-30 ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 2.4833711 ; maximum endpoint shift (pp) = 0 
+Diagnostic: A Female vs male ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 2.3389354 ; maximum endpoint shift (pp) = 0 
+Diagnostic: A General dentist vs other ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 2.8341268 ; maximum endpoint shift (pp) = 0 
+Diagnostic: A Public vs academic-only ; point flagged = FALSE ; bootstrap flagged = 2 of 1000 ; maximum absolute coefficient = 17.906409 ; maximum endpoint shift (pp) = 0.14464533 
+Diagnostic interval: A Public vs academic-only total ; primary (pp) = -9.5348334 to 21.0762822 ; omission sensitivity only (pp) = -9.5417797 to 21.0823217 
+Diagnostic interval: A Public vs academic-only direct ; primary (pp) = -9.2791872 to 21.3576175 ; omission sensitivity only (pp) = -9.2834324 to 21.3786469 
+Diagnostic interval: A Public vs academic-only indirect ; primary (pp) = -4.5324271 to  4.3757875 ; omission sensitivity only (pp) = -4.3877817 to  4.3790195 
+Diagnostic: A Private vs academic-only ; point flagged = FALSE ; bootstrap flagged = 25 of 1000 ; maximum absolute coefficient = 19.016753 ; maximum endpoint shift (pp) = 1.6500015 
+Diagnostic interval: A Private vs academic-only total ; primary (pp) = -14.545560 to  20.614378 ; omission sensitivity only (pp) = -14.578389 to  20.522483 
+Diagnostic interval: A Private vs academic-only direct ; primary (pp) = -12.222922 to  23.517332 ; omission sensitivity only (pp) = -12.290863 to  22.632138 
+Diagnostic interval: A Private vs academic-only indirect ; primary (pp) = -10.8474703 to   2.2818873 ; omission sensitivity only (pp) = -9.1974689 to  2.3194816 
+Diagnostic: A Mixed vs academic-only ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 3.263333 ; maximum endpoint shift (pp) = 0 
+Diagnostic: B Age 31-60 vs 20-30 ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 2.2600106 ; maximum endpoint shift (pp) = 0 
+Diagnostic: B Female vs male ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 2.2656261 ; maximum endpoint shift (pp) = 0 
+Diagnostic: B General dentist vs other ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 2.7148694 ; maximum endpoint shift (pp) = 0 
+Diagnostic: B Public vs academic-only ; point flagged = FALSE ; bootstrap flagged = 1 of 1000 ; maximum absolute coefficient = 19.641973 ; maximum endpoint shift (pp) = 0.19699649 
+Diagnostic interval: B Public vs academic-only total ; primary (pp) = -13.845071 to  14.782780 ; omission sensitivity only (pp) = -13.648074 to  14.785057 
+Diagnostic interval: B Public vs academic-only direct ; primary (pp) = -15.515148 to  12.532858 ; omission sensitivity only (pp) = -15.515910 to  12.534196 
+Diagnostic interval: B Public vs academic-only indirect ; primary (pp) = -2.5937169 to  7.2331459 ; omission sensitivity only (pp) = -2.5948745 to  7.2359950 
+Diagnostic: B Private vs academic-only ; point flagged = FALSE ; bootstrap flagged = 17 of 1000 ; maximum absolute coefficient = 18.856131 ; maximum endpoint shift (pp) = 0.27541966 
+Diagnostic interval: B Private vs academic-only total ; primary (pp) = -24.8156784 to   6.9794223 ; omission sensitivity only (pp) = -24.5402587 to   7.0524999 
+Diagnostic interval: B Private vs academic-only direct ; primary (pp) = -25.1554517 to   6.5835326 ; omission sensitivity only (pp) = -24.9662056 to   6.7180884 
+Diagnostic interval: B Private vs academic-only indirect ; primary (pp) = -2.7004649 to  5.7047583 ; omission sensitivity only (pp) = -2.6908446 to  5.4600573 
+Diagnostic: B Mixed vs academic-only ; point flagged = FALSE ; bootstrap flagged = 0 of 1000 ; maximum absolute coefficient = 3.7835747 ; maximum endpoint shift (pp) = 0 
+Diagnostic total flagged bootstrap replicates = 45 
+Diagnostic-only omission is not used as the analysis estimator; sparse-fit sensitivity remains a limitation.

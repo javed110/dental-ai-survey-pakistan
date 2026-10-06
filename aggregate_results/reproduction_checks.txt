@@ -1,0 +1,6 @@
+PASS: frozen data integrity, schema and recodes
+PASS: 108 manuscript Table 5 values match to reported rounding
+PASS: paired cells, response totals and primary adjusted odds ratio
+PASS: 12000 converged finite decomposition bootstrap replicates; 45 numerical flags
+PASS: overall = direct + indirect for all 12 descriptive contrasts
+Scope: computational reproducibility of supplied coded data; not original-response validation

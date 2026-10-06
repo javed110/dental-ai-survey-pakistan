@@ -1,0 +1,6 @@
+RNG: Mersenne-Twister, Inversion, Rejection
+Main standardized bootstrap: seed 20260925, B=2000
+Paired bootstrap: seed 20260925, B=5000
+Pathway bootstrap: seed 20260926, B=1000 for each of 12 contrasts
+Input MD5: 226cc2c1b75a557f36789a7c11e30f7f
+No network access, submission, email, or publication is performed by these scripts.

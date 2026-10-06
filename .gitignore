@@ -1,0 +1,13 @@
+# Local respondent-level data and fitted model objects must not be published.
+data/*.csv
+data/*.json
+data/*.omv
+results/
+*.rds
+*.RData
+*.Rhistory
+*.zip
+__pycache__/
+*.pyc
+.Renviron
+.env

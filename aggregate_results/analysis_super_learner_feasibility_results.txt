@@ -1,0 +1,40 @@
+
+REPEAT 1 nested five-fold evaluation
+ rep_id      learner  Brier log_loss    AUC
+      1         null 0.2498   0.6927 0.4973
+      1     logistic 0.2487   0.6900 0.5670
+      1  interaction 0.2517   0.7024 0.5714
+      1 shallow_tree 0.2603   0.7148 0.4957
+      1     ensemble 0.2539   0.7020 0.5337
+Mean convex ensemble weights (null, logistic, interaction, shallow tree):
+[1] 0.495 0.125 0.272 0.108
+
+REPEAT 2 nested five-fold evaluation
+ rep_id      learner  Brier log_loss    AUC
+      2         null 0.2498   0.6927 0.4973
+      2     logistic 0.2462   0.6850 0.5892
+      2  interaction 0.2537   0.7041 0.5635
+      2 shallow_tree 0.2516   0.6962 0.5371
+      2     ensemble 0.2469   0.6865 0.5556
+Mean convex ensemble weights (null, logistic, interaction, shallow tree):
+[1] 0.407 0.428 0.103 0.062
+
+REPEAT 3 nested five-fold evaluation
+ rep_id      learner  Brier log_loss    AUC
+      3         null 0.2498   0.6927 0.4973
+      3     logistic 0.2412   0.6737 0.5987
+      3  interaction 0.2421   0.6795 0.6018
+      3 shallow_tree 0.2470   0.6872 0.5576
+      3     ensemble 0.2442   0.6811 0.5779
+Mean convex ensemble weights (null, logistic, interaction, shallow tree):
+[1] 0.603 0.153 0.241 0.003
+
+MEAN OF THREE REPEATED FIVE-FOLD EVALUATIONS (descriptive only)
+      learner  Brier log_loss    AUC
+     ensemble 0.2483   0.6899 0.5557
+  interaction 0.2492   0.6953 0.5789
+     logistic 0.2453   0.6829 0.5850
+         null 0.2498   0.6927 0.4973
+ shallow_tree 0.2530   0.6994 0.5301
+
+LIMIT: all predictors and hypothetical willingness were recorded concurrently; source agreement for the coded use response is unverified; there is no target deployment population, pre-outcome predictor set, or external dataset. These scores cannot support clinical prediction claims.

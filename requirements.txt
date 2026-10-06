@@ -1,0 +1,2 @@
+# Required only for rendering S2 Fig. Tested with Python 3.12.14 and Pillow 12.3.0.
+Pillow==12.3.0
